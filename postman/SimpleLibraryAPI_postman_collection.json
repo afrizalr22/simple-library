@@ -1,0 +1,92 @@
+{
+    "info": {
+        "_postman_id": "957839eb-4fab-468a-89cc-fe6451c03768",
+        "name": "Simple Library API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "35396602"
+    },
+    "item": [
+        {
+            "name": "ambil semua buku",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/books",
+                    "protocol": "http",
+                    "host": ["127", "0", "0", "1"],
+                    "port": "8000",
+                    "path": ["api", "books"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "tambah buku",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"title\": \"Cinta itu luka\",\r\n    \"author\": \"Eka Kurniawan\",\r\n    \"year\": 2016\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/books",
+                    "protocol": "http",
+                    "host": ["127", "0", "0", "1"],
+                    "port": "8000",
+                    "path": ["api", "books"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "update buku",
+            "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"title\": \"Cinta itu buta\",\r\n    \"author\": \"Eka Kurniawan\",\r\n    \"year\": 2016\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/books/7",
+                    "protocol": "http",
+                    "host": ["127", "0", "0", "1"],
+                    "port": "8000",
+                    "path": ["api", "books", "7"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "hapus buku",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"title\": \"Cinta itu buta\",\r\n    \"author\": \"Eka Kurniawan\",\r\n    \"year\": 2016\r\n}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/books/7",
+                    "protocol": "http",
+                    "host": ["127", "0", "0", "1"],
+                    "port": "8000",
+                    "path": ["api", "books", "7"]
+                }
+            },
+            "response": []
+        }
+    ]
+}
