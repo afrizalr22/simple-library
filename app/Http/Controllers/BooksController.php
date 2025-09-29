@@ -28,7 +28,7 @@ class BooksController extends Controller
 
         if ($validator->fails()) {
             return response()->json([
-                'message' => 'Validation erros',
+                'message' => 'Validation errors',
                 'errors' => $validator->errors(),
             ], 422);
         }
@@ -52,11 +52,16 @@ class BooksController extends Controller
             'title' => 'required|string|max:150',
             'author' => 'required|string|max:100',
             'year' => 'nullable|integer|max:' . date('Y'),
+        ], [
+            'title.required' => 'Title wajib diisi.',
+            'author.required' => 'Author wajib diisi.',
+            'year.integer' => 'Year harus berupa angka.',
+            'year.max' => 'Year tidak boleh lebih besar dari tahun sekarang.',
         ]);
 
         if ($validator->fails()) {
             return response()->json([
-                'message' => 'field not null',
+                'message' => 'Validation errors',
                 'errors' => $validator->errors()
             ], 422);
         }
